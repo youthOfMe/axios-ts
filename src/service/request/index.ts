@@ -46,4 +46,10 @@ class HYRequest {
         })
     }
 
+    get<T = any>(config: HYRequestConfig<T>) {
+        return this.request({
+            ...config,
+            method: 'GET'
+        })
+    }
 }
