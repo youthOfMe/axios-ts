@@ -47,10 +47,23 @@ class HYRequest {
     }
 
     get<T = any>(config: HYRequestConfig<T>) {
-        return this.request({
-            ...config,
-            method: 'GET'
-        })
+        return this.request({ ...config, method: 'GET' })
+    }
+    
+    post<T = any>(config: HYRequestConfig<T>) {
+        return this.request({ ...config, method: 'POST' })
+    }
+
+    delete<T = any>(config: HYRequestConfig<T>) {
+        return this.request({ ...config, method: 'DELETE' })
+    }
+
+    put<T = any>(config: HYRequestConfig<T>) {
+        return this.request({ ...config, method: 'PUT' })
+    }
+
+    patch<T = any>(config: HYRequestConfig<T>) {
+        return this.request({ ...config, method: "PATCH" })
     }
 }
 
